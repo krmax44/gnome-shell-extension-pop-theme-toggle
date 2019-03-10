@@ -16,7 +16,7 @@ function enable() {
     this.light = new PopupMenu.PopupMenuItem("Light");
     this.light.connect('activate', (item, event) => {
         this.reset_ornament();
-        this.set_theme("Pop");
+        this.set_theme("Mojave");
         item.setOrnament(Ornament.DOT);
     });
     this.themeMenu.menu.addMenuItem(this.light, 0);
@@ -24,7 +24,7 @@ function enable() {
     this.dark = new PopupMenu.PopupMenuItem("Dark");
     this.dark.connect('activate', (item, event) => {
         this.reset_ornament();
-        this.set_theme("Pop-dark");
+        this.set_theme("Mojave-dark");
         item.setOrnament(Ornament.DOT);
     });
     this.themeMenu.menu.addMenuItem(this.dark, 1);
@@ -39,9 +39,9 @@ function set_theme(theme) {
 }
 
 function set_theme_label(theme){
-    if(theme == "Pop") {
+    if(theme == "Mojave") {
         this.themeMenu.label.text = "Light Theme";
-    } else if (theme == "Pop-dark") {
+    } else if (theme == "Mojave-dark") {
         this.themeMenu.label.text = "Dark Theme";
     }
 }
